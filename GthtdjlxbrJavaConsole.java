@@ -2,16 +2,6 @@ import java.util.*;
 
 public class GthtdjlxbrJavaConsole
 {
-   /* public static HashMap <Character, Character> createDictOfChars(String keys, String values)
-    {
-        HashMap <Character, Character> eng = new HashMap <Character, Character> ();
-        for ( int i = 0 ; i < keys.length() ; i++ ){
-            eng.put(keys.charAt(i), values.charAt(i));
-        }
-        return eng;
-    }*/
-
-//=======================================================
     public static int IndexOf (char arr[], char c)
     {
         for ( int i = 0 ; i < arr.length ; i++ )
