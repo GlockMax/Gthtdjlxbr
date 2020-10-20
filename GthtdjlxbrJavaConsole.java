@@ -20,8 +20,6 @@ public class GthtdjlxbrJavaConsole
         System.out.println("Введите строку для перевода ") ;
         String search = (String) scan.nextLine() ;
         
-        long startTime = System.currentTimeMillis() ;
-	
         char[] eng = ( (String) "`1234567890-=\\qwertyuiop[]asdfghjkl;'zxcvbnm,./~!@#$%^&*()_+|QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>?" ).toCharArray() ;
         char[] rus = ( (String) "ё1234567890-=\\йцукенгшщзхъфывапролджэячсмитьбю.Ё!\"№;%:?*()_+/ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ," ).toCharArray() ;
 
@@ -29,11 +27,9 @@ public class GthtdjlxbrJavaConsole
         
         for ( int i = 0 ; i < search.length() ; i++ )
         {
-            answer += rus[IndexOf(eng, search.charAt(i))] ;
+            answer += IndexOf(eng, search.charAt(i)) != -1 ? rus[IndexOf(eng, search.charAt(i))] : search.charAt(i);
         }
         
-        long timeSpent = System.currentTimeMillis() - startTime ;
         System.out.println(answer) ;
-        System.out.println("Время выполнения: " + timeSpent / 1000.0  + " секунд") ;
     }
 }
